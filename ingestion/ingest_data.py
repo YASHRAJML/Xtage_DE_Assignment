@@ -20,7 +20,7 @@ headers = {'Authorization': f'Bearer {auth_token}'}
 response = requests.get(api_endpoint, headers=headers)
 customer_data = response.json()
 
-#this above code fetches data from two external APIs using authentication tokens and stores the responses in the exchange_rates and customer_data variables.
+#this above code fetche data from two external APIs using authentication token and stores the responses in the exchange_rates and customer_data variables.
 
 
 # Ingest products and transactions data from PostgreSQL database
