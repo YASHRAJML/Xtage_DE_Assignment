@@ -5,6 +5,7 @@ import psycopg2
 # Ingest sales data from CSV file
 sales_data = pd.read_csv('sales_data.csv')
 
+
 # Ingest exchange rates from external API
 api_endpoint = 'https://api.example.com/exchange_rates'
 auth_token = 'your_auth_token'
@@ -19,7 +20,12 @@ headers = {'Authorization': f'Bearer {auth_token}'}
 response = requests.get(api_endpoint, headers=headers)
 customer_data = response.json()
 
+#this above code fetches data from two external APIs using authentication tokens and stores the responses in the exchange_rates and customer_data variables.
+
+
 # Ingest products and transactions data from PostgreSQL database
+#Connection details to the postgreSQl database is required
+#cur is used to exceute the quries and fetch the results
 conn = psycopg2.connect(
     host="localhost",
     database="your_database",
