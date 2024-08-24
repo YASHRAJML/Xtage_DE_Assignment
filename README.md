@@ -107,5 +107,26 @@ Implementation Steps:
 
 The API has been exposed to the database using the Lambda function. The Lambda function connects to a PostgreSQL database, retrieves product data, processes it into JSON format, and returns it as an HTTP response.
 
+Belows are two step by step process to exceute the pipeline:
+Deploying to AWS
+1.	Create an AWS S3 bucket to store the ingested and preprocessed data.
+2.	Create an AWS Glue job to run the data processing pipeline.
+3.	Create an AWS API Gateway to expose the preprocessed data as a RESTful API.
+4.	Update the ingest_data.py script to upload the ingested data to the S3 bucket.
+5.	Update the preprocess_data.py script to upload the preprocessed data to the S3 bucket.
+6.	Configure the AWS Glue job to run the pipeline scripts in the correct order.
+7.	Deploy the pipeline to AWS and run the Glue job.
+Running the Pipeline Locally
+1.	Create a new directory for your project and navigate into it.
+2.	Create the following folders: ingest_data, standardize_data, preprocess_data, and data.
+3.	Create the Python scripts: ingest_data.py, standardize_data.py, and preprocess_data.py in their respective folders.
+4.	Copy the code from my previous response into the corresponding files.
+5.	Run the scripts in the following order:
+•	python ingest_data/ingest_data.py to ingest data from all sources.
+•	python standardize_data/standardize_data.py to standardize the ingested data.
+•	python preprocess_data/preprocess_data.py to preprocess the standardized data.
+6.	The preprocessed data will be saved to a CSV file in the data folder.
+
+
 A diagrammatic flow chart of the pipeline is provided in the PPT.
 -------------
