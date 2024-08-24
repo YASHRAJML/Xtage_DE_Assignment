@@ -17,6 +17,7 @@ I used Python scripts to fetch data from all sources, including flat files, APIs
 - Flat files are ingested into a DataFrame.
 - For API ingestion, I defined the API endpoint and authentication token, created a dictionary with the authentication token in the Authorization header, sent a GET request to the API endpoint, parsed the response as JSON, and stored it in the `exchange_rates` variable, similarly for customer data in JSON format.
 - Data is also ingested from PostgreSQL, retrieving products and transactions data. The script establishes a connection to the database using the provided credentials, executes SQL queries to retrieve the data, and returns the results as tuples.
+- postgres SQL is used to create the database for products and transactions and then it is imported using python psycopg module
 
 By the end of this step, we have completed the ingestion process.
 
