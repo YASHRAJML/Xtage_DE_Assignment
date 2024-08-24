@@ -108,7 +108,4 @@ Implementation Steps:
 The API has been exposed to the database using the Lambda function. The Lambda function connects to a PostgreSQL database, retrieves product data, processes it into JSON format, and returns it as an HTTP response.
 
 A diagrammatic flow chart of the pipeline is provided in the PPT.
-
----
-
-Feel free to adjust any details as needed!
+-------------
